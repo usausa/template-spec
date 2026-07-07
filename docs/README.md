@@ -15,15 +15,15 @@
 | `traceability/` | 索引 | 派生 | 生成/検査 | `/trace` |
 | コード書式・品質 | What | — | **ツール** | `.editorconfig` + analyzer、**警告0** |
 
-## 原則
+## 📌 原則
 - **Why は残す** (`adr/`)。**What/How は生成する** (`reference/`)。**書式は機械が守る** (analyzer)。→ 手で守る面積を最小化。
 - **コードや DB を見れば分かる情報は文書化しない・二重管理しない** (現状仕様=生成物+テスト、辞書/DES は語彙・意図のみ)。
 - **SDD (仕様駆動)**: 実装を 1:1 でミラーする設計書は残さない。`DES`=意図、`ADR`=理由、現状=生成+テスト。
 - `reference/**` は生成物。編集しない (`.claude/settings.json` の deny)。Web API の現状仕様は OpenAPI で生成する。
 
-## ID 体系
+## 📌 ID 体系
 - `REQ-NNNN` (要求) / `DES-NNNN` (設計意図) / `ADR-NNNN` (決定)。テスト・コードは `traceability/index.md` で対応づける。
 - 手書き文書には frontmatter (`id` / `status` / `related`) を付け、`/trace` が機械検査できるようにする。
 
-## 進め方
+## 🔄 進め方
 `guides/workflow.md` を参照 (決定→ `/adr`、実装→ build 逆ループ→ `/spec-sync`→ `/review`+`/cross-review`→ `/done`)。
