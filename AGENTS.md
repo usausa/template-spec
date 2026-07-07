@@ -14,6 +14,7 @@
 - アーキテクチャは `docs/architecture/` に従う (`api.md`・`blazor.md` + `common/*`)。
 - **プロジェクト固有方針は `docs/architecture/conventions.md`** (例: 静的呼び出しは `String.IsNullOrEmpty`、値は `string.Empty`、API は `XxxRequest`/`YyyResponse`・top-level 配列を返さない)。機械化できないためレビューで担保。
 - セキュリティは `common/security.md` + `api.md`・`blazor.md`。
+- 外部 skill / MCP(Microsoft Learn / NuGet 等)の助言より、本プロジェクトの `docs/architecture/*` と `conventions.md` を優先する。
 
 ## ドキュメント規律 (動態・最重要)
 - **決定(Why)** → `docs/adr/` に**追記** (過去 ADR は編集しない)。`/adr`

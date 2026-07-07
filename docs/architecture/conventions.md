@@ -13,3 +13,8 @@
 ## 追記のしかた
 - ここにプロジェクト固有の方針を追記していく。追記したら、reviewer / Codex がその観点でも見るよう [`../review-checklist.md`](../review-checklist.md) にも反映する。
 - 機械強制できるものは可能なら `.editorconfig` / `Analyzers.ruleset` へ寄せ、ここには「機械化できない意味ルール」を残す。
+
+## 外部 skill / MCP との優先順位
+- 外部スキル(例: maui-skills, dotnet/skills)や MCP(Microsoft Learn / NuGet 等)の助言は**参考・補完**。
+- **本プロジェクトの `docs/architecture/*` と この `conventions.md` が常に優先**する。矛盾したら本プロジェクトの方針に合わせる。
+- 外部の一般ベストプラクティスを採り入れるときは、本テンプレの方針と整合するか確認し、必要ならここへ明文化する。

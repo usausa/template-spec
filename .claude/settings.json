@@ -10,7 +10,8 @@
       "Edit",
       "Write",
       "Grep",
-      "Glob"
+      "Glob",
+      "mcp__microsoft-learn__*"
     ],
     "ask": [
       "Bash(git push:*)"

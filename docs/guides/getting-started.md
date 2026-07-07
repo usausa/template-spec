@@ -13,6 +13,8 @@
    - ソリューションは `.slnx` (Solution Items に設定ファイルを束ねる)。
 6. OpenAPI を有効化 (`AddOpenApi()` / `MapOpenApi()`) し、`/spec-sync` で `docs/reference/api/openapi.json` を生成できるようにする。
 7. Claude Code 設定 (`.claude/settings.json` の permissions / hooks) を確認。PowerShell フックに `CLAUDE_CODE_USE_POWERSHELL_TOOL=1`。
+   - **MCP**: `.mcp.json` に Microsoft Learn と NuGet MCP を同梱 (初回は承認を求める。NuGet MCP は **.NET 10 SDK** の `dnx` が必要)。
+   - **skill の追加**(任意)は `運用ガイド.md` を参照。
 8. 最初の要求を `docs/requirements/` に書く (`/requirements` で草案生成も可)。
 
 以降の開発の回し方は [workflow.md](workflow.md)。
