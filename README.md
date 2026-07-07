@@ -5,7 +5,7 @@ Blazor Server + minimal API を想定する。
 
 ## 3原則
 - **レーンを固定**: C# + Claude 前提。標準は具体的で深い。
-- **不変と可変を分離**: engine(`.claude`/`docs`) ／ 生成物(`docs/reference`) ／ 環境固有値 を分ける。
+- **不変と可変を分離**: engine(`.claude`/`docs`) / 生成物(`docs/reference`) / 環境固有値 を分ける。
 - **ドキュメントを腐らせない**: Why=ADR、What/How=生成・テスト、書式=analyzer、更新は hooks / `/done` で変更に埋め込む。
 
 ## スタック / LINT

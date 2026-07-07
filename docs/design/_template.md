@@ -20,4 +20,4 @@ related: []            # 対応 REQ / 参照 ADR
 
 ---
 > **書かないこと**: API の引数一覧・ルート形状などの現状仕様(What/How)。
-> それはコード＋OpenAPI(`docs/reference/api`)＋テスト＝生成物に委ねる。ここには「何を・なぜ」だけを書く。
+> それはコード+OpenAPI(`docs/reference/api`)+テスト＝生成物に委ねる。ここには「何を・なぜ」だけを書く。

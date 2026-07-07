@@ -30,7 +30,7 @@
 意図(REQ/DES)が変わったなら同じ変更内で更新
     │
     ▼
-/review (reviewer)  →  /done (DoDゲート)  →  人間が git commit
+/review (reviewer) + /cross-review (Codex)  →  /done (DoDゲート)  →  人間が git commit
 ```
 
 ---
@@ -77,8 +77,9 @@
 - **例**: `今回の実装で REQ-0002 / DES-0002 の意図と変わった点があれば該当文書を更新して。無ければ「変更なし」と報告して。`
 
 ### 7. レビュー
-- **打つもの**: `/review`
-- **ポイント**: Critical が残る間は先へ進まない。指摘ごとの次アクション (`/adr`・`/spec-sync` 等) に従う。
+- **打つもの**: `/review` (Claude) + 必要に応じて `/cross-review` (別ベンダー Codex で観点を共有してクロスレビュー)
+- **触るファイル**: 読込 `docs/review-checklist.md` (観点)・`docs/architecture/*`・`REQ/DES`・`docs/reference`
+- **ポイント**: Critical が残る間は先へ進まない。指摘ごとの次アクション (`/adr`・`/spec-sync` 等) に従う。両者の Critical が消えるまで完了としない。
 
 ### 8. 完了ゲート
 - **打つもの**: `/done`
@@ -98,7 +99,8 @@
 | `/adr <決定>` | 決定・トレードオフを残す | 人 |
 | (自然文で実装依頼) | 実装 (skill 自動ロード) | 人→AI |
 | `/spec-sync` | Web API/型/DB を変えた | 人 |
-| `/review` | 変更のレビュー | 人 |
+| `/review` | 変更のレビュー(Claude) | 人 |
+| `/cross-review` | Codex で別ベンダーのクロスレビュー | 人 |
 | `/trace` | ID 整合・決定漏れ検査 | 人 |
 | `/done` | 仕上げの DoD ゲート | 人 |
 

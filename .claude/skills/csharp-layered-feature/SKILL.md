@@ -19,6 +19,6 @@ description: このプロジェクトの層構成(Program/Application/Endpoints/
 
 ## アンチパターン(`docs/architecture` 準拠)
 - Endpoint/Component にロジックを書く(→ Service/Domain へ委譲)
-- API の異常系を例外で通知(→ `IResult` ＋ ProblemDetails)
+- API の異常系を例外で通知(→ `IResult` + ProblemDetails)
 - `Task.Wait()` / `Task.Result` / 不要な `Task.Run()`(→ `await`)
 - SQL で表示用加工(→ 上位で加工)
