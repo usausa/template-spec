@@ -10,7 +10,7 @@
 
 ## コーディング
 - 書式は `.editorconfig` に従う (唯一の正)。メンバ変数に `_` プレフィックスを付けない。
-- **ビルド警告ゼロ + テスト緑が完了条件**(`/verify`)。警告抑制は適用前に確認。
+- **ビルド警告ゼロ + テスト緑が完了条件**: `dotnet build`(警告0)+ `dotnet test`(Claude は `/verify`)。警告抑制は適用前に確認。
 - アーキテクチャは `docs/architecture/` に従う (採用形態の doc + `common/*`)。
 - **プロジェクト固有方針は `docs/architecture/conventions.md`**(機械化できずレビューで担保)。
 - セキュリティは `common/security.md` + 採用形態の architecture doc。
@@ -29,7 +29,7 @@
 - レビュー観点は `docs/review-checklist.md` (Claude `/review` と Codex `/cross-review` が共有)。
 
 ## 完了条件 (DoD)
-- **build + test 緑**(`/verify`)/ 影響 docs 更新 + REQ 蒸留 / 決定は ADR / `/trace` 整合(退役漏れ含む)/ レビュー観点を満たす。
+- **build + test 緑**(`dotnet build` + `dotnet test`。Claude は `/verify`)/ 影響 docs 更新 + REQ 蒸留 / 決定は ADR / `/trace` 整合(退役漏れ含む)/ レビュー観点を満たす。
 - Git 操作 (commit / push) は**人間が実行** (AI はコマンドを提示するのみ)。提示するコミット文 / ブランチ名は `git-commit` skill(Conventional Commits)に従う。
 
 ## 記述
