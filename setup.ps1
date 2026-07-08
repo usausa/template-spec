@@ -127,7 +127,14 @@ else {
     Write-Host "[PM=off] PM 関連ファイルとマーカーを削除。"
 }
 
-# --- 4. セットアップ用ステージング(.setup)を削除 ---
+# --- 4. テンプレ保守ブロック(原本専用)とセットアップ用ステージング(.setup)を削除 ---
+foreach ($f in @('AGENTS.md', 'README.md')) {
+    $file = Join-Path $root $f
+    if (-not (Test-Path $file)) { continue }
+    $text = Get-Content -Raw $file
+    $new = $text -replace '(?s)(\r?\n){0,2}<!-- template-dev:start -->.*?<!-- template-dev:end -->', ''
+    if ($new -ne $text) { Set-Content -NoNewline -Path $file -Value $new }
+}
 Remove-Item -Recurse -Force -ErrorAction SilentlyContinue (Join-Path $root '.setup')
 
 Write-Host ""

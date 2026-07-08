@@ -35,3 +35,9 @@
 
 ## 記述
 - ドキュメント・コメントは日本語。
+
+<!-- template-dev:start -->
+## テンプレート保守 (原本のみ。setup.ps1 実行時にこの節ごと消える)
+- このリポジトリは template-aidd の**原本**。テンプレ自体を保守するなら、**まず `.setup/maintenance/MAINTENANCE.md` を読む** (保守の原則・リポジトリの仕掛け・検証手順)。
+- 変更後は `pwsh .setup/maintenance/test-setup.ps1` で回帰テスト (ALL PASS が完了条件)。
+<!-- template-dev:end -->

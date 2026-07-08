@@ -52,6 +52,16 @@
 - **MCP(同梱)**: `.mcp.json` に Microsoft Learn(docs grounding)+ NuGet(パッケージ・脆弱性)。ツール定義は固定費なので **Learn / NuGet に絞る**(可視ツール ~50 上限)。
 - **skill**: 同梱分は `.claude/skills/` を見る(個名は列挙しない=腐らせない)。追加は MAUI=`davidortinau/maui-skills`、Web=公式 `dotnet/skills` 等を**選別**(plugin か vendor-copy)。**`conventions.md` が常に優先**。description は固定費なので入れすぎない。
 
+<!-- template-dev:start -->
+## 🔧 テンプレート自体の保守(原本のみ)
+
+> この節はテンプレート**原本**にだけ存在する(`setup.ps1` 実行時に削除される)。
+
+- 保守者(人 / AI)は、環境を問わず**まず [`.setup/maintenance/MAINTENANCE.md`](.setup/maintenance/MAINTENANCE.md) を読む**(保守の原則・リポジトリの仕掛け・検証手順。AI は `AGENTS.md` 末尾のブロックからも誘導される)。
+- 変更後は `pwsh .setup/maintenance/test-setup.ps1` で全シナリオの回帰テストを実行する(**ALL PASS が完了条件**)。
+- 決定は `.setup/maintenance/decisions.md` に追記、保留・未決は `backlog.md` へ。保守知識はこのリポジトリ内で管理する(外部メモ・ローカル memory に正を置かない)。
+<!-- template-dev:end -->
+
 ## 🔗 リンク
 - 各段の具体プロンプト: `docs/guides/workflow.md`
 - アーキ原則: `docs/architecture/`(採用形態の doc + `common/*`)
