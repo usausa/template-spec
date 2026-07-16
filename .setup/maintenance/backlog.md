@@ -9,11 +9,13 @@
 - **lite の ceremony の厚み** — Spec Kit の `/clarify` / `/analyze` / 独立 `/tasks` 相当を lite は「未決事項 + 人レビュー」に畳んでいる。複雑機能で前捌きが薄くないか
 - **`/done` クローズ蒸留の安全網** — 「テスト/ADR/glossary のどれにも載らず消える意図はないか」の確認を close に足すか(蒸留の情報損失リスク対策)
 - **担保のハード強制** — `/done` ゲートを Husky.Net pre-commit / CI へ移設するか(slopwatch も部品候補)
+- **非 Windows 対応** — `.claude/hooks/*.ps1`(source-normalize / dotnet-verify / done-check)は PowerShell 前提。macOS/Linux で使うなら代替が要る
 - **ドキュメントの分離(AI / 人 / アセット)** — 人専用文書・画像が増えた場合の分離方針
 - **Blazor E2E の残項目** — `/verify` での E2E 実行方針 / MAUI・Desktop 対称の UI テスト skill / review-checklist 観点(任意)
 - **winui.md の執筆** — setup の採用リストに登録済み。ファイル追加のみで対応可
 - **二重管理刈り込みの残項目** — doc-sync agent の役割整理 / README の `CLAUDE_CODE_USE_POWERSHELL_TOOL` 検証
 - **Aaronontheweb/dotnet-skills の扱い** — 次に蒸留する skill の選定と時期(slopwatch / Aspire 系 / EF Core 系 ほか)
+- **template-drafts の取り込み** — `D:\Incubator\template-drafts\` の規約ドラフト(feature-level に改稿済み)のレビュー・本体取り込み。ADR サンプル 4 本(microorm / valuetask-ct / singleton-asynclocal / realdb-test)は**サンプル扱いのまま保留**(採否未決)。枠 doc(grpc / aws-lambda / cli / generator)の深掘りは別途(深掘り元 = `D:\Project\KDH2` / `Actswin` / `D:\GitHubTemplate\*`)
 - **検討事項の運用の Issues 化** — 複数人・複数 AI 体制になったら、この backlog の起票・クローズを GitHub Issues に移す選択肢
 - **その他** — CPM(`Directory.Packages.props`)採用可否 / 旧参考資料の削除可否 / 汎用プロンプト集 / nested AGENTS.md / org での AGENTS.md 必須化
 
